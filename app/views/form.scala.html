@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Job Page</title>
+    <style>
+        * {
+        box-sizing: border-box;
+        }
+
+        input[type=text], select, textarea {
+        width: 100%;
+        padding: 12px;
+        border: 1px solid #ccc;
+        border-radious: 4px;
+        resize: vertical;
+        }
+
+        label {
+        padding: 12px 12px 12px 0;
+        display: inline-block;
+        }
+
+        input[type=submit] {
+        background-color: #4CAF50;
+        color: white;
+        padding: 12px 20px;
+        border: none;
+        border-radious: 4px;
+        cursor: pointer;
+        float: right;
+        }
+
+        input[type=submit]:hover {
+        background-color: #45a049;
+        }
+
+        .container {
+        border-radious: 5px;
+        background-color: #f2f2f2;
+        padding: 20px;
+        }
+
+        .col-25 {
+        float: left;
+        width: 25%;
+        margin-top: 6px;
+        }
+
+        .col-75 {
+        float: left;
+        width: 75%;
+        margin-top: 6px;
+        }
+
+        /* clear floats after the columns */
+        .row:after {
+            content: "";
+            display:table;
+            clear: both;
+        }
+
+
+
+    </style>
+</head>
+<body>
+<H2>Input Form</H2>
+<p>All the fields are mandatory kindly fill in proper format.</p>
+
+<div class="container">
+    <form action="http://localhost:9000/getjson">
+        <div class="row">
+            <div class="col-25>">
+                <label for="outputColumns">Select output column</label>
+            </div>
+            <div class="col-75">
+                <input type="text" id="outputColumns" name="selectColumns" placeholder="eg. id,name,salary..">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-25>">
+                <label for="filepath">Input File Path</label>
+            </div>
+            <div class="col-75">
+                <input type="text" id="filepath" name="filePath" placeholder="eg. /usr/ambuj/data.csv">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-25>">
+                <label for="maxrow">Maximum Output Rows</label>
+            </div>
+            <div class="col-75">
+                <input type="text" id="maxrow" name="maxRow" placeholder="eg. 10, 100, 1000  ...">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-25>">
+                <label for="schema">Select output column</label>
+            </div>
+            <div class="col-75">
+                <input type="text" id="schema" name="schema" placeholder="eg. id:int, name:string ..">
+            </div>
+        </div>
+        <div class="row">
+            <input type="submit" value="Submit">
+        </div>
+    </form>
+</div>
+</body>
+</html>
